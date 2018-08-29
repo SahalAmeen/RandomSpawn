@@ -1,3 +1,4 @@
+<?php
 namespace RumDaDuMCPE;
 
 class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Listener {
@@ -13,3 +14,4 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
         $p->teleport($x, $y, $z);
     }
 }
+?>
