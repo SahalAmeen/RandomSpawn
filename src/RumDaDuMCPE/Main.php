@@ -11,7 +11,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
     public function randomSpawn(\pocketmine\Player $p) {
         $x = $z = mt_rand(0, 1000);
         $y = $p->getLevel()->getHighestBlockAt(($p->getFloorX(), $p->getFloorZ()) + 1);
-        $p->teleport(new Vector3($x, $y, $z));
+        $p->teleport(new \pocketmine\math\Vector3($x, $y, $z));
     }
 }
 ?>
