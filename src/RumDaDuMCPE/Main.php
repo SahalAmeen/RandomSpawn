@@ -6,7 +6,7 @@ class Main extends \pocketmine\plugin\PluginBase implements \pocketmine\event\Li
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
     public function onJoin(\pocketmine\event\player\PlayerJoinEvent $e) {
-        $this->randomSpawn($e->getPlayer());
+        if (!$e->getPlayer()->hasPlayedBefore()) $this->randomSpawn($e->getPlayer());
     }
     public function randomSpawn(\pocketmine\Player $p) {
         $x = $z = mt_rand(0, 1000);
